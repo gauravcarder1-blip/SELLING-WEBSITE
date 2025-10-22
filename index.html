@@ -35,6 +35,18 @@
             opacity: 0.3;
             z-index: -1;
         }
+        .logo {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .logo i {
+            margin-right: 0.5rem;
+            color: #4ecdc4;
+        }
         .hero {
             max-width: 1200px;
             margin: 0 auto;
@@ -71,6 +83,25 @@
         .cta-btn:hover {
             transform: scale(1.05);
             box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+        .trust-badges {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 2rem 0;
+            flex-wrap: wrap;
+        }
+        .trust-badge {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+        }
+        .trust-badge i {
+            margin-right: 0.5rem;
+            color: #4ecdc4;
         }
         .search-bar {
             margin: 2rem auto;
@@ -163,6 +194,21 @@
         .buy-btn:hover {
             background: linear-gradient(45deg, #218838, #17a2b8);
         }
+        .guarantee {
+            background: #f9f9f9;
+            padding: 2rem;
+            text-align: center;
+            margin: 2rem 0;
+            border-radius: 15px;
+        }
+        .guarantee h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+        .guarantee p {
+            color: #666;
+        }
         .testimonials {
             background: #f9f9f9;
             padding: 3rem 2rem;
@@ -216,14 +262,27 @@
             .ott-list {
                 grid-template-columns: 1fr;
             }
+            .trust-badges {
+                flex-direction: column;
+                align-items: center;
+            }
         }
     </style>
 </head>
 <body>
     <header>
+        <div class="logo">
+            <i class="fas fa-play-circle"></i> OTT Apps Store
+        </div>
         <div class="hero">
             <h1>Welcome to OTT Apps Store</h1>
             <p>Discover and subscribe to the best Over-The-Top streaming services at unbeatable prices. Stream movies, music, and more with ease!</p>
+            <div class="trust-badges">
+                <div class="trust-badge"><i class="fas fa-shield-alt"></i> Trusted Seller</div>
+                <div class="trust-badge"><i class="fas fa-lock"></i> Secure Payments</div>
+                <div class="trust-badge"><i class="fas fa-star"></i> 5-Star Rated</div>
+                <div class="trust-badge"><i class="fas fa-check-circle"></i> Verified</div>
+            </div>
             <button class="cta-btn">Explore Now</button>
         </div>
     </header>
@@ -231,6 +290,10 @@
         <div class="search-bar">
             <input type="text" placeholder="Search for OTT apps...">
             <button><i class="fas fa-search"></i></button>
+        </div>
+        <div class="guarantee">
+            <h2>Our Guarantee</h2>
+            <p>We are a trusted seller with years of experience. All transactions are secure, and we ensure instant access to your subscriptions. No scams, just quality service!</p>
         </div>
         <div class="ott-list">
             <!-- Demanded OTTs at the top -->
@@ -391,60 +454,4 @@
             </div>
             <!-- Pluto TV -->
             <div class="ott-item">
-                <h3>Pluto TV</h3>
-                <p>Free live TV channels and on-demand content.</p>
-                <div class="price">Free</div>
-                <button class="buy-btn">Get Access</button>
-            </div>
-            <!-- BritBox -->
-            <div class="ott-item">
-                <h3>BritBox</h3>
-                <p>British TV classics and originals.</p>
-                <div class="price">₹581 / $7</div>
-                <button class="buy-btn">Buy Now</button>
-            </div>
-            <!-- Acorn TV -->
-            <div class="ott-item">
-                <h3>Acorn TV</h3>
-                <p>British and international mysteries and dramas.</p>
-                <div class="price">₹498 / $6</div>
-                <button class="buy-btn">Buy Now</button>
-            </div>
-            <!-- Shudder -->
-            <div class="ott-item">
-                <h3>Shudder</h3>
-                <p>Horror, thriller, and supernatural content.</p>
-                <div class="price">₹498 / $6</div>
-                <button class="buy-btn">Buy Now</button>
-            </div>
-            <!-- MUBI -->
-            <div class="ott-item">
-                <h3>MUBI</h3>
-                <p>Curated art-house films and documentaries.</p>
-                <div class="price">₹581 / $7</div>
-                <button class="buy-btn">Buy Now</button>
-            </div>
-        </div>
-        <div class="testimonials">
-            <h2>What Our Users Say</h2>
-            <p class="testimonial">"This store made it so easy to access all my favorite streaming services at great prices!" - Happy Customer</p>
-        </div>
-    </div>
-    <footer>
-        <p>&copy; 2023 OTT Apps Store. All rights reserved. <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
-    </footer>
-    <script>
-        // Script to handle buy button clicks - open contact page
-        const buyButtons = document.querySelectorAll('.buy-btn');
-        buyButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                window.open('contact.html', '_blank');
-            });
-        });
-        // CTA button scroll to container
-        const ctaBtn = document.querySelector('.cta-btn');
-        ctaBtn.addEventListener('click', () => {
-            document.querySelector('.container').scrollIntoView({ behavior: 'smooth' });
-        });
-    </script>
-</
+                <h3>Pluto TV</h
